@@ -29,6 +29,15 @@ def handle_request2():
 
     return 'token-aaa'
 
+@app.route("/ul", methods=["GET", "POST"])
+def handle_request2():
+    print("Headers:")
+    print(request.headers)
+    print("Body:")
+    print(request.data.decode("utf-8"))
+
+    return '["u1","u2","u3"]'
+
 
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=8090)
