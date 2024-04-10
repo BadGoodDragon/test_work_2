@@ -30,7 +30,7 @@ def handle_request2():
     return 'token-aaa'
 
 @app.route("/ul", methods=["GET", "POST"])
-def handle_request2():
+def handle_request3():
     print("Headers:")
     print(request.headers)
     print("Body:")
