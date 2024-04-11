@@ -35,8 +35,24 @@ def handle_request3():
     print(request.headers)
     print("Body:")
     print(request.data.decode("utf-8"))
-
     return '["u1","u2","u3"]'
+
+@app.route("/true", methods=["GET", "POST"])
+def handle_request4():
+    print("Headers:")
+    print(request.headers)
+    print("Body:")
+    print(request.data.decode("utf-8"))
+    return 'true'
+
+@app.route("/false", methods=["GET", "POST"])
+def handle_request5():
+    print("Headers:")
+    print(request.headers)
+    print("Body:")
+    print(request.data.decode("utf-8"))
+
+    return 'false'
 
 
 if __name__ == "__main__":
