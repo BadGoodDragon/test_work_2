@@ -54,6 +54,15 @@ def handle_request5():
 
     return 'false'
 
+@app.route("/yes", methods=["GET", "POST"])
+def handle_request5():
+    print("Headers:")
+    print(request.headers)
+    print("Body:")
+    print(request.data.decode("utf-8"))
+
+    return '3'
+
 
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=8090)
